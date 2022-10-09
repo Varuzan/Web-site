@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css') }}">
+    <title>ժամերի աշխարհ</title>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header_inner">
+            <div class="header_logo">ժամերի աշխարհ</div>
+
+            <nav class="nav">
+                <a class="nav_link" href=/about>Մեր մասին</a>
+                <a class="nav_link" href="/services">Ծառայություններ</a>
+                <a class="nav_link" href="#">Կապ մեզ հետ</a>
+                <a class="nav_link" href="/sing_in">Նույնականացում</a>
+                <a class="cart" href="#"></a>
+                <a class="search" href="#"></a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="intro">
+    <div class="container">
+        <div class="intro_inner">
+            <h2 class="intro_suptitle">Լավագույնը աշխարհում</h2>
+            <h1 class="intro_title">Բարի գալուստ ժամերի աշխարհ</h1>
+
+            <a class="btn" href="#">Մեր մասին</a>
+        </div>
+    </div>
+
+    <div class="slider">
+        <div class="container">
+            <div class="slider_inner">
+                <div class="slider_item active">
+                    <b class="slider_num">01</b> ժամերի աշխարհ
+                </div>
+                <div class="slider_item">
+                    <b class="slider_num">02</b> Ծառայություն
+                </div>
+                <div class="slider_item">
+                    <b class="slider_num">03</b> Կապ մեզ հետ
+                </div>
+                <div class="slider_item">
+                    <b class="slider_num">04</b> Նույնականացում
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

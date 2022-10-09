@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css') }}">
+    <title>Նույնականացում</title>
+</head>
+<body class="background-login">
+    <div class="section">
+        <div class="container">
+                <div class="container flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <div class="header_inner">
+            <div class="header_logo_black">ժամերի աշխարհ</div>
+
+            <nav class="nav">
+                <a class="nav_link_black" href=/about>Մեր մասին</a>
+                <a class="nav_link_black" href="/services">Ծառայություններ</a>
+                <a class="nav_link_black" href="#">Կապ մեզ հետ</a>
+                <a class="nav_link_black" href="/sing_in">Նույնականացում</a>
+                <a class="cart_black" href="#"></a>
+                <a class="search_black" href="#"></a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container ">
+        <form class="needs-validation" method="post">
+
+          <div class="row g-3">
+
+            <div class="col-sm-6">
+              <label class="form-label">Անուն</label>
+              <input type="text" class="form-control" name="name" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+
+              <div class="col-sm-6">
+              <label class="form-label">Ազգանուն</label>
+              <input type="text" class="form-control" name="lName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Email <span class="text-muted">(Ընտրովի)</span></label>
+              <input type="email" class="form-control" name="email" placeholder="you@example.com">
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Գաղտնաբառ</label>
+              <input type="text" class="form-control" name="password" placeholder="" required="">
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Հաստատեք գաղտնաբառը <span class="text-muted"></span></label>
+              <input type="text" class="form-control" name="password2" placeholder="">
+            </div>
+
+            <div class="col-md-5">
+              <label class="form-label">Երկիր</label>
+              <select class="form-select" name="country" required="">
+                <option value="">Ընտրեք...</option>
+                <option>Միացյալ Նահանգներ</option>
+                <option>Հայաստան</option>
+                <option>Ալբանիա</option>
+                <option>Արգենտինա</option>
+                <option>Ավստրալիա</option>
+                <option>Ավստրիա</option>
+                <option>Ալժիր</option>
+                <option>Անգոլա</option>
+                <option>Ադրբեջան</option>
+                <option>Բելգիա</option>
+                <option>Բոսնիա-Հերցեգովինա</option>
+                <option>Բուլղարիա</option>
+                <option>Բանգլադեշ</option>
+                <option>Գերմանիա</option>
+                <option>Գրենլանդիա</option>
+                <option>Դանյա</option>
+                <option>Ֆրանսիա</option>
+                <option>Մեծ Բրիտանիա</option>
+                <option>Իռլանդիա</option>
+                <option>Իսլանդիա</option>
+                <option>Իսպանիա</option>
+                <option>Պորտուգալիա</option>
+                <option>Նիդեռլանդներ</option>
+                <option>ՄԼյուքսեմբուրգ</option>
+                <option>Շվեյցարիա</option>
+                <option>Իտալիա</option>
+                <option>Իտալիա</option>
+                <option>Սան Մարինո</option>
+                <option>Սլովենիա</option>
+                <option>Խորվաթիա</option>
+                <option>Մոնտենեգրո</option>
+                <option>Հունաստան</option>
+                <option>Ռումինիա</option>
+                <option>Ուկրաինա</option>
+                <option>Բելառուս</option>
+                <option>Լիտվա</option>
+                <option>Լատվիա</option>
+                <option>Էստոնիա</option>
+                <option>Էստոնիա</option>
+                <option>Շվեդիա</option>
+                <option>Նորվեգիա</option>
+                <option>Կանադա</option>
+                <option>Մեքսիկա</option>
+                <option>Չինաստան</option>
+                <option>Հնդկաստան</option>
+                <option>Սաուդյան Արաբիա</option>
+                <option>Արաբական Միացյալ Էմիրություններ</option>
+                <option>Իսրայել</option>
+
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Շարունակեք</button>
+            <br>
+            <br>
+            {% if dBase %}
+                <div class="error"></div>
+                <h5>{{ error }}</h5>
+                <div class="error_line"></div>
+            {% endif %}
+
+        </form>
+    </div>
+</body>
+</html>
